@@ -52,6 +52,10 @@ namespace csoundcsharp
         internal const string _dllVersion = "csound64.dll";
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
         internal const string _dllVersion = "CsoundLib64.bundle";
+#elif UNITY_EDITOR_LINUX || UNITY_STANDALONE_LINUX
+        // Linux: Csound is not bundled; libcsound64.so must be installed on the system
+        // (Ubuntu: libcsound64-6.0 and libcsound64-dev). Mono resolves "csound64" to libcsound64.so.
+        internal const string _dllVersion = "csound64";
 #elif UNITY_ANDROID
         internal const string _dllVersion = "csoundandroid";
 #elif UNITY_IOS || UNITY_VISIONOS

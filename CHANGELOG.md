@@ -1,3 +1,11 @@
+## [3.5.2-linux.1] - 2026-10-15
+
+- [Add] Linux support (Editor and Standalone) using the system Csound library.
+  Csound is not bundled for Linux: install Csound 6.17 or newer on the system
+  (Ubuntu: `sudo apt install libcsound64-6.0 libcsound64-dev csound`).
+  The managed code loads `libcsound64.so` through the "csound64" library name.
+- [Fix] `CsoundFileWatcher.TestCsoundForErrors` returns on platforms other than Windows and macOS.
+
 ## [3.5.2] - 2025-04-28
 
 - [Fix] Version bump
